@@ -29,17 +29,17 @@ while True:
             print("Valor invalido! Tente novamente.")
             
     elif opcao == "s":
-        operacao = float(input("Digite o valor do saque desejado: "))
+        operacao = float(input("Informe o valor do saque desejado: "))
         
         excecao_saques = numero_saques >= LIMITE_SAQUES
-        exececao_limite = operacao > 500
+        exececao_limite = operacao > limite
         saldo_insuficiente = operacao > saldo
         
         if excecao_saques:
             print("Número de saques diário excedido! Volte amanhã!")
             
         elif exececao_limite:
-            print(f"O valor desejada excede o limite de saque. O limite de saque da conta é de R$ {limite:.2f}")
+            print(f"O valor desejado excede o limite de saque. O limite de saque da conta é de R$ {limite:.2f}")
         
         elif saldo_insuficiente:
             print("Saldo insuficiente!")
@@ -64,5 +64,5 @@ while True:
         break
     
     else:
-        print("Operaçãõ inválida, por favor selecione novamente a operação desejada.")
+        print("Operação inválida, por favor selecione novamente a operação desejada.")
         
